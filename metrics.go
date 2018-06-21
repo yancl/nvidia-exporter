@@ -88,10 +88,11 @@ func collectMetrics() (*Metrics, error) {
 			return nil, err
 		}
 
-		fanSpeed, err := device.FanSpeed()
-		if err != nil {
-			return nil, err
-		}
+		fanSpeed := -1
+		//fanSpeed, err := device.FanSpeed()
+		//if err != nil {
+		//	return nil, err
+		//}
 
 		memoryTotal, memoryUsed, err := device.MemoryInfo()
 		if err != nil {
